@@ -6,24 +6,83 @@
 
 html{
   font-size: 62.5%;
+  color: var(--main-color);
 }
 
 body{
   font-size: 2.4rem;
-  background-color: #1b1b21;
+  background-color: var(--background-color);
+}
+
+:root{
+  --background-color: #1b1b21;
+  --main-color: #FF7200;
 }
 
 /*-----------Hub Grid---------*/
-.hub--grid{
+.hub--grid {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(5,minmax(0,auto));
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . titel titel titel . ."
+    ". . titel titel titel . ."
+    ". uitleg uitleg uitleg uitleg uitleg ."
+    ". uitleg uitleg uitleg uitleg uitleg ."
+    ". . . . . . ."
+    ". . . arrow . . ."
+    ". . . audio--image . . ."
+    ". . . audio--toggle . . ."
+    "footer footer footer footer footer footer footer";
 }
 
+.title { grid-area: titel; }
+
+.uitleg { grid-area: uitleg; }
+
+.footer { grid-area: footer; }
+
+.audio--toggle { grid-area: audio--toggle; }
+
+.audio--image { grid-area: audio--image; }
+
+.arrow { grid-area: arrow; }
 
 
 
 
+
+/*---------Arrow-------------*/
+.arrow {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: red;
+}
+.arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid var(--background-color);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.arrow::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
 /*---------Audio Button--------*/
 .switch{
   position: relative;
@@ -41,7 +100,7 @@ body{
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--main-color);
   top: 1px;
   left: 1px;
   transition: all 0.3s;
@@ -52,7 +111,7 @@ body{
 }
 
 .checkbox:checked + .switch{
-  background-color: green;
+  background-color: lightblue;
 }
 
 .checkbox{
