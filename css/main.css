@@ -23,7 +23,7 @@ body{
 .hub--grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr auto 1fr 0.5fr;
   gap: 0px 0px;
   grid-template-areas:
     ". . . . . . ."
@@ -38,15 +38,24 @@ body{
     "footer footer footer footer footer footer footer";
 }
 
-.title { grid-area: titel; }
+.title {
+  grid-area: titel;
+  font-size: 150%;
+  text-align: center;
+}
 
 .uitleg { grid-area: uitleg; }
 
 .footer { grid-area: footer; }
 
-.audio--toggle { grid-area: audio--toggle; }
+.audio--toggle {
+  grid-area: audio--toggle;
+  text-align: center;
+}
 
-.audio--image { grid-area: audio--image; }
+.audio--image {
+  grid-area: audio--image;
+}
 
 .arrow { grid-area: arrow; }
 
@@ -55,33 +64,41 @@ body{
 
 
 /*---------Arrow-------------*/
-.arrow {
-  width: 200px;
-  height: 40px;
-  position: relative;
-  background: red;
+a.btn{
+    height:50px;
+    line-height:50px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0 10px;
+    color: var(--main-color);
+    background-color: var(--background-color);
+    position:relative;
+    display:inline-block;
 }
-.arrow::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid var(--background-color);
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+a.btn:after{
+    position:absolute;
+    right:-20px;
+    content:" ";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 25px 0 25px 20px;
+    border-color: transparent transparent transparent var(--main-color);
 }
-.arrow::before {
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid red;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+a.btn:hover{
+    background-color:red;
+}
+a.btn:hover:after{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 25px 0 25px 20px;
+    border-color: transparent transparent transparent var(--main-color);
+}
+
+/*-------Audio Image----------*/
+.audio--image > figure > img{
+  max-width: 100%;
 }
 /*---------Audio Button--------*/
 .switch{
