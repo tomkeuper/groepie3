@@ -1,7 +1,17 @@
-function swapImage() {
-  var audioFoto = document.getElementById('audioFoto');
+/*-----------------Audio Toggle------------------*/
+var audioFoto = document.getElementById("audioFoto");
+var toggle = document.getElementById("toggle");
+var playSounds = true;
 
-  if(audioFoto.src == "img/soundOn.png"){
-    audioFoto.src = "img/soundOff.png"
+function swapImage(){
+  if(toggle.checked == true){
+    audioFoto.src = "img/soundOff.png";
+    playSounds = false;
+  } else {
+    audioFoto.src = "img/soundOn.png";
+    playSounds = true;
   }
 }
+
+
+/*----------------------------------*/
