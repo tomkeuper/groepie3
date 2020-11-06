@@ -8,42 +8,44 @@
     <title>Flavours of Iraq - Interactive Website</title>
   </head>
   <body>
-    <main>
-      <div class="home--grid">
-        <section class="title">
-          <h1>Flavours of Iraq</h1>
-        </section>
-        <section class="uitleg">
-          <p>Deze website is afgeleid van de documentaire: "Flavours of Iraq". Door verder te klikken op de website krijg je steeds meer te weten over het verhaal van Feurat Alani.</p>
-        </section>
-        <section class="arrow">
-          <a href="hub.html" class="btn">Continue</a>
-        </section>
-        <section class="audio--image">
-          <figure><img id="audioFoto" src="img/soundOn.png" alt=""></figure>
-        </section>
-        <section class="audio--toggle">
-          <input type="checkbox" id="toggle" class="checkbox" onclick="swapImage()">
-          <label for="toggle" class="switch"></label>
-        </section>
-        <footer class="footer">
-          <ul>
-            <li>Credits</li>
-            <li>Original film</li>
-            <li>Hogeschool Leiden</li>
-          </ul>
-        </footer>
-      </div>
-    </main>
-  <script src="js/main.js"></script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/8.0.1/firebase-app.js"></script>
+    <div class="startingOverlay">
+      <main>
+        <div class="home--grid">
+          <section class="title">
+            <h1>Flavours of Iraq</h1>
+          </section>
+          <section class="uitleg">
+            <p>Deze website is afgeleid van de documentaire: "Flavours of Iraq". Door verder te klikken op de website krijg je steeds meer te weten over het verhaal van Feurat Alani.</p>
+          </section>
+          <section class="arrow">
+            <a href="hub.html" class="btn">Continue</a>
+          </section>
+          <section class="audio--image">
+            <figure><img id="audioFoto" src="img/soundOn.png" alt=""></figure>
+          </section>
+          <section class="audio--toggle">
+            <input type="checkbox" id="toggle" class="checkbox" onclick="swapImage()">
+            <label for="toggle" class="switch"></label>
+          </section>
+          <footer class="footer">
+            <ul>
+              <li>Credits</li>
+              <li>Original film</li>
+              <li>Hogeschool Leiden</li>
+            </ul>
+          </footer>
+        </div>
+      </main>
+    <script src="js/main.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.0.1/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/8.0.1/firebase-analytics.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.0.1/firebase-analytics.js"></script>
 
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+  </div>
   </body>
 </html>
