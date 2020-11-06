@@ -1,3 +1,8 @@
+var imported = document.createElement('script');
+imported.src = '../js/main.js';
+document.head.appendChild(imported);
+
+
 var verhaaltekst1 = document.getElementById("js--verhaal1--text");
 typeText = (verhaal1) =>{
     if(verhaal1 != ""){
@@ -10,3 +15,6 @@ typeText = (verhaal1) =>{
 }
 
 typeText(Array.from("Hello World"));
+
+
+console.log("loaded book.js")
