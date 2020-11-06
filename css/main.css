@@ -195,12 +195,15 @@ a.btn:hover:after{
 
 .extrazin > h3{
   text-align: center;
-  padding: 0 5vw;
+  padding: 0 5vw 10px;
   color: #E8E8E8;
-  opacity: 0.7;
-  animation-name: floating-text;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
+  transition: 2s;
+  /*max-height: 50px;*/
+  /*opacity: 0.7;*/
+  /*animation-name: floating-text;*/
+  /*animation-iteration-count: infinite;*/
+  /*animation-duration: 3s;*/
+  animation: fadeIn ease 1s;
 }
 
 /*-----------Header Grid-----------------*/
@@ -250,6 +253,7 @@ a.btn:hover:after{
   gap: 15px 15px;
   grid-template-areas:
     "hub--icon continue--arrow"
+    "hub--icon continue--arrow"
     "obama--video obama--video"
     "tekst1 tekst1"
     "ending--video ending--video"
@@ -260,12 +264,14 @@ a.btn:hover:after{
   grid-area: hub--icon;
   max-width: 15vw;
   float: left;
+
 }
 
 .hub--icon > img {
   max-width: 16vw;
   max-height: 16vw;
   margin: 5px;
+  max-width: 200px;
 }
 
 .continue--arrow {
@@ -433,4 +439,9 @@ footer{
   .checkbox:checked + .switch::after{
     left: 40px;
   }
+}
+/*-----Animations------*/
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
