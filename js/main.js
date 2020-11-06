@@ -1,6 +1,6 @@
 // -------Global Variables-------
 var playSounds = true;
-var cookie = document.cookie;
+var cname = "verhaalnummer";
 
 /*-----------------Audio Toggle------------------*/
 var audioFoto = document.getElementById("audioFoto");
@@ -21,28 +21,14 @@ function swapImage(){
 console.log("Cookie Testing");
 console.log(document.cookie)
 
-const knop1 = document.getElementById("js--knop1")
-const knop2 = document.getElementById("js--knop2")
 
-const knop8 = document.getElementById("js--knop8")
-const knop9 = document.getElementById("js--knop9")
-knop1.onclick = function () {
-  setVerhaalCookie("1")
-}
-knop2.onclick = function () {
-  setVerhaalCookie("2")
-}
 
-knop8.onclick = function () {
-  console.log(getVerhaalCookie());
-}
-knop9.onclick = function () {
-  console.log(getVerhaalCookie());
-
-}
-
-function setVerhaalCookie(cookiename, number) {
-  cookie = cookiename + "=" + number;
+function setVerhaalCookie(cookiename, number, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cookiename + "=" + number +  ";" + expires + ";path=/";
+  console.log("cookie veranderd naar: " + number)
 }
 
 function getVerhaalCookie(cookiename){
@@ -60,3 +46,6 @@ function getVerhaalCookie(cookiename){
   }
   return "";
 }
+
+
+console.log("Loaded main.js")
