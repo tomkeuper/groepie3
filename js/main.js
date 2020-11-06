@@ -1,7 +1,10 @@
+// -------Global Variables-------
+var playSounds = true;
+var cookie = document.cookie;
+
 /*-----------------Audio Toggle------------------*/
 var audioFoto = document.getElementById("audioFoto");
 var toggle = document.getElementById("toggle");
-var playSounds = true;
 
 function swapImage(){
   if(toggle.checked == true){
@@ -26,4 +29,13 @@ typeText = (verhaal1) =>{
   }
 }
 
-typeText(Array.from("Hello World"));
+if (document.location.pathname.split(/\/(?=.)/).length == 3) {
+  typeText(Array.from("Hello World"));
+} else {
+  console.log("nee");
+}
+
+// -----------Cookie Testing-----------
+console.log("Cookie Testing");
+console.log(document.cookie)
+document.cookie = "verhaalnummer=0"
