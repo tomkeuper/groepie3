@@ -86,7 +86,8 @@ a.btn:after{
     border-color: transparent transparent transparent var(--main-color);
 }
 a.btn:hover{
-    background-color:red;
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 a.btn:hover:after{
     width: 0px;
@@ -94,6 +95,12 @@ a.btn:hover:after{
     border-style: solid;
     border-width: 25px 0 25px 20px;
     border-color: transparent transparent transparent var(--main-color);
+}
+
+
+.continue--arrow > .btn {
+  float: right;
+  margin-right: 20px;
 }
 
 /*-------Audio Image----------*/
@@ -178,6 +185,136 @@ a.btn:hover:after{
   max-width: 22vw;
   max-height: 22vh;
 }
+
+/*------------------Header--grid--------------*/
+.header--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "hub--icon continue--arrow";
+}
+
+.hub--icon {
+  grid-area: hub--icon;
+  max-width: 15vw;
+  float: left;
+}
+
+.continue--arrow {
+  grid-area: continue--arrow;
+}
+
+.hub--icon > img {
+  max-width: 16vw;
+  max-height: 16vw;
+  margin: 5px;
+}
+
+/*----------------Voorleesboek-----------*/
+.book--grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". . book ."
+    ". . book ."
+    ". . . .";
+}
+
+.book {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 40vh;
+  cursor: pointer;
+  backface-visibility: visible;
+  grid-area: book;
+}
+
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 35vw;
+  height: 100%;
+  top: 0; left: 0;
+  transform-origin: left center;
+  transition: transform 1.2s ease-in-out;
+}
+
+.front, .back {
+  background: #2F1000;
+}
+
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.page1, .page2 {
+  background: #efefef;
+}
+
+.page3, .page4 {
+  background: #f5f5f5;
+}
+
+.page5, .page6 {
+  background: #fafafa;
+}
+
+.page5 > p{
+  transform: rotateY(180deg);
+  margin: 5px;
+  color: black;
+  font-size: 0.6em;
+  font-family: sans-serif;
+}
+
+.book:hover .front {
+  transform: rotateY(-160deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+.book:hover .page1 {
+  transform: rotateY(-150deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+.book:hover .page2 {
+  transform: rotateY(-30deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+.book:hover .page3 {
+  transform: rotateY(-140deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+.book:hover .page4 {
+  transform: rotateY(-40deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+.book:hover .page5 {
+  transform: rotateY(-130deg) scale(1.2);
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.book:hover .page6 {
+  transform: rotateY(-50deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+.book:hover .back {
+  transform: rotateY(-20deg) scale(1.2);
+  border-right: 1px solid black;
+}
+
+
 /*----Footer----*/
 footer{
   position: absolute;
