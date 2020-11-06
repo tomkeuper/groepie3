@@ -118,25 +118,25 @@ function changeSentence() {
           document.getElementById("js--sentence").innerText = "De zomer van 1990 betekende het begin van de Golf oorlog";
           break
       case "3":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       case "4":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       case "5":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       case "6":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       case "7":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       case "8":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       case "9":
-          document.getElementById("js--sentence").innerText = "";
+          document.getElementById("js--sentence").innerText = "s";
           break
       default:
           console.log("cookie was not recognized")
