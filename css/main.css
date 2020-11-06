@@ -201,30 +201,61 @@ a.btn:hover:after{
   animation-duration: 3s;
 }
 
-/*------------------Header--grid--------------*/
-.header--grid {
+
+/*---------------Video grid--------*/
+.video--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 15px 15px;
   grid-template-areas:
-    "hub--icon continue--arrow";
+    "hub--icon continue--arrow"
+    "obama--video obama--video"
+    "tekst1 tekst1"
+    "einding--video einding--video"
+    "tekst2 tekst2"
 }
-
 .hub--icon {
   grid-area: hub--icon;
   max-width: 15vw;
   float: left;
 }
 
-.continue--arrow {
-  grid-area: continue--arrow;
-}
-
 .hub--icon > img {
   max-width: 16vw;
   max-height: 16vw;
   margin: 5px;
+}
+
+.continue--arrow {
+  grid-area: continue--arrow;
+  position: absolute;
+  right: 0;
+}
+
+.obama--video {
+  grid-area: obama--video;
+  max-width: 100vw;
+}
+
+.tekst1 {
+  grid-area: tekst1;
+}
+
+.ending--video {
+  grid-area: einding--video;
+  max-width: 100vw;
+
+}
+
+.tekst2 { grid-area: tekst2; }
+
+
+.fragment9video1 {
+  width: 80%;
+  max-width: 100%;
+  height: 40vh;
+  max-height: 60vh;
 }
 
 /*----------------Voorleesboek-----------*/
