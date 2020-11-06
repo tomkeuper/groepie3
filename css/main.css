@@ -147,11 +147,12 @@ a.btn:hover:after{
 .grid--hubpagina {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
-  gap: 30px 30px;
+  grid-template-rows: 0.5fr auto 1fr 1fr 1fr 0.5fr;
+  gap: 25px 25px;
   height: 100vh;
   grid-template-areas:
     ". . . . ."
+    "extrazin extrazin extrazin extrazin extrazin"
     ". fragment--1 fragment--2 fragment--3 ."
     ". fragment--4 fragment--5 fragment--6 ."
     ". fragment--7 fragment--8 fragment--9 ."
@@ -184,6 +185,20 @@ a.btn:hover:after{
 .grid--hubpagina > div > a > img {
   max-width: 22vw;
   max-height: 22vh;
+}
+
+.extrazin{
+  grid-area: extrazin;
+}
+
+.extrazin > h3{
+  text-align: center;
+  padding: 0 5vw;
+  color: #E8E8E8;
+  opacity: 0.7;
+  animation-name: floating-text;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
 }
 
 /*------------------Header--grid--------------*/
