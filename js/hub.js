@@ -107,46 +107,81 @@ knop9.addEventListener("click",
     })
 
 
-getVerhaalCookie(cname)
 function changeSentence() {
-    getVerhaalCookie(cname)
+    console.log(getVerhaalCookie(cname))
     switch (getVerhaalCookie(cname)) {
-      case "1":
-          document.getElementById("js--sentence").innerText = "Feurat ging tijdens zijn herfstvakantie reizen naar de stad Fallujah, de rivier Euphrades. Hij is vernoemd naar deze rivier.";
-          break
-      case "2":
+        case "1":
+            document.getElementById("js--sentence").innerText = "Feurat ging tijdens zijn herfstvakantie reizen naar de stad Fallujah, de rivier Euphrades. Hij is vernoemd naar deze rivier.";
+            document.getElementById("js--knop3").classList.add("darker")
+            document.getElementById("js--knop4").classList.add("darker")
+            document.getElementById("js--knop5").classList.add("darker")
+            document.getElementById("js--knop6").classList.add("darker")
+            document.getElementById("js--knop7").classList.add("darker")
+            document.getElementById("js--knop8").classList.add("darker")
+            document.getElementById("js--knop9").classList.add("darker")
+            break
+        case "2":
           document.getElementById("js--sentence").innerText = "De zomer van 1990 betekende het begin van de Golf oorlog";
+          document.getElementById("js--knop4").classList.add("darker")
+          document.getElementById("js--knop5").classList.add("darker")
+          document.getElementById("js--knop6").classList.add("darker")
+          document.getElementById("js--knop7").classList.add("darker")
+          document.getElementById("js--knop8").classList.add("darker")
+          document.getElementById("js--knop9").classList.add("darker")
           break
-      case "3":
-          document.getElementById("js--sentence").innerText = "s";
+        case "3":
+          document.getElementById("js--sentence").innerText = "Feurat woonde zijn hele jeugd in Parijs en vroeg zich af waarom hij niet in Baghdad woonde.";
+          document.getElementById("js--knop5").classList.add("darker")
+          document.getElementById("js--knop6").classList.add("darker")
+          document.getElementById("js--knop7").classList.add("darker")
+          document.getElementById("js--knop8").classList.add("darker")
+          document.getElementById("js--knop9").classList.add("darker")
           break
-      case "4":
-          document.getElementById("js--sentence").innerText = "s";
+        case "4":
+          document.getElementById("js--sentence").innerText = "Iedereen in Iraq is erg vrijgevend, het word zelfs als een beledeging gezien als je niks zegt.";
+          document.getElementById("js--knop6").classList.add("darker")
+          document.getElementById("js--knop7").classList.add("darker")
+          document.getElementById("js--knop8").classList.add("darker")
+          document.getElementById("js--knop9").classList.add("darker")
           break
-      case "5":
-          document.getElementById("js--sentence").innerText = "s";
+        case "5":
+          document.getElementById("js--sentence").innerText = "Feurat had snel door dat er iets niet klopte in het land...";
+          document.getElementById("js--knop7").classList.add("darker")
+          document.getElementById("js--knop8").classList.add("darker")
+          document.getElementById("js--knop9").classList.add("darker")
           break
-      case "6":
-          document.getElementById("js--sentence").innerText = "s";
+        case "6":
+            document.getElementById("js--sentence").innerText = "Ook het normale leven in Iraq is voor de meeste zeer zwaar.";
+            document.getElementById("js--knop8").classList.add("darker")
+            document.getElementById("js--knop9").classList.add("darker")
           break
-      case "7":
-          document.getElementById("js--sentence").innerText = "s";
+        case "7":
+            document.getElementById("js--sentence").innerText = "Voor Feurat was het heel lang geleden dat hij zijn jeugd vrienden heeft gezien.";
+            document.getElementById("js--knop9").classList.add("darker")
           break
-      case "8":
-          document.getElementById("js--sentence").innerText = "s";
+        case "8":
+            document.getElementById("js--sentence").innerText = "Maar toen trok Amerika zich terug.";
           break
-      case "9":
-          document.getElementById("js--sentence").innerText = "s";
-          break
-      default:
-          console.log("cookie was not recognized")
-          break
+        case "9":
+            document.getElementById("js--sentence").innerText = "";
+            break
+        default:
+            console.log("cookie was not recognized")
+            document.getElementById("js--knop2").classList.add("darker")
+            document.getElementById("js--knop3").classList.add("darker")
+            document.getElementById("js--knop4").classList.add("darker")
+            document.getElementById("js--knop5").classList.add("darker")
+            document.getElementById("js--knop6").classList.add("darker")
+            document.getElementById("js--knop7").classList.add("darker")
+            document.getElementById("js--knop8").classList.add("darker")
+            document.getElementById("js--knop9").classList.add("darker")
+            break
     }
 }
 changeSentence()
 
 function makeButtonsDarker() {
-
+    var x = getVerhaalCookie(cname)
 }
 
 // // Wrap every letter in a span
