@@ -38,4 +38,3 @@ if (document.location.pathname.split(/\/(?=.)/).length == 3) {
 // -----------Cookie Testing-----------
 console.log("Cookie Testing");
 console.log(document.cookie)
-document.cookie = "verhaalnummer=0"
