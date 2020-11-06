@@ -1,3 +1,8 @@
+var imported = document.createElement('script');
+imported.src = '../js/main.js';
+document.head.appendChild(imported);
+
+
 const knop1 = document.getElementById("js--knop1")
 const knop2 = document.getElementById("js--knop2")
 const knop3 = document.getElementById("js--knop3")
