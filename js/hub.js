@@ -107,9 +107,68 @@ knop9.addEventListener("click",
     })
 
 
+getVerhaalCookie(cname)
+function changeSentence() {
+    getVerhaalCookie(cname)
+    switch (getVerhaalCookie(cname)) {
+      case "1":
+          document.getElementById("js--sentence").innerText = "Feurat ging tijdens zijn herfstvakantie reizen naar de stad Fallujah, de rivier Euphrades. Hij is vernoemd naar deze rivier.";
+          break
+      case "2":
+          document.getElementById("js--sentence").innerText = "De zomer van 1990 betekende het begin van de Golf oorlog";
+          break
+      case "3":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      case "4":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      case "5":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      case "6":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      case "7":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      case "8":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      case "9":
+          document.getElementById("js--sentence").innerText = "";
+          break
+      default:
+          console.log("cookie was not recognized")
+          break
+    }
+}
+changeSentence()
+
 function makeButtonsDarker() {
 
 }
+
+// // Wrap every letter in a span
+// var textWrapper = document.querySelector('.ml3');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+//
+// anime.timeline({loop: true})
+//     .add({
+//         targets: '.ml3 .letter',
+//         opacity: [0,1],
+//         easing: "easeInOutQuad",
+//         duration: 2250,
+//         delay: (el, i) => 150 * (i+1)
+//     }).add({
+//     targets: '.ml3',
+//     opacity: 0,
+//     duration: 1000,
+//     easing: "easeOutExpo",
+//     delay: 1000
+// });
+
+
 
 
 
