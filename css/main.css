@@ -201,8 +201,27 @@ a.btn:hover:after{
   animation-duration: 3s;
 }
 
+/*------------Video Grid (Single)------------*/
+.video--grid--single {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 15px 15px;
+  grid-template-areas:
+    "hub--icon continue--arrow"
+    "generosity--video generosity--video"
+    "tekst tekst"
+}
 
-/*---------------Video grid--------*/
+.generosity--video {
+  grid-area: generosity--video;
+}
+
+.generosity--video--text {
+  grid-area: tekst;
+  text-align: center;
+}
+/*---------------Video grid (Double)--------*/
 .video--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -234,22 +253,22 @@ a.btn:hover:after{
   right: 0;
 }
 
-.obama--video {
+.obama--video, .intro--video {
   grid-area: obama--video;
 }
 
-.obama--video--text {
+.obama--video--text, .intro--video--text {
   grid-area: tekst1;
   text-align: center;
 }
 
-.ending--video {
+.ending--video, .apricot--video {
   grid-area: ending--video;
   max-width: 100vw;
 
 }
 
-.ending--video--text {
+.ending--video--text, .apricot--video--text {
   grid-area: tekst2;
   text-align: center;
 }
