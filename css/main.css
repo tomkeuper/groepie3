@@ -205,6 +205,10 @@ a.btn:hover:after{
   animation: fadeIn ease 1s;
 }
 
+.darker {
+  filter: brightness(20%);
+}
+
 /*-----------Header Grid-----------------*/
 .header--grid {
   display: grid;
