@@ -231,7 +231,7 @@ a.btn:hover:before{
 }
 
 .hub--icon > img {
-  float: right;
+  text-align: right;
 }
 
 .continue--arrow {
