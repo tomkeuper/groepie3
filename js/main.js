@@ -61,4 +61,24 @@ function getVerhaalCookie(cookiename){
 }
 
 
+// ------ Background Music -------
+  var embed=document.createElement('audio');
+  embed.setAttribute('src', '../sounds/backgroundMusic.mp3');
+  document.getElementsByTagName('body')[0].appendChild(embed);
+
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
+
+window.addEventListener("click", event => {
+  console.log("click");
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
+
+
+
 console.log("Loaded main.js")
