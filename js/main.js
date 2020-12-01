@@ -3,20 +3,6 @@ var playSounds = true;
 var cname = "verhaalnummer";
 var debug = false;
 
-/*-----------------Audio Toggle------------------*/
-var audioFoto = document.getElementById("audioFoto");
-var toggle = document.getElementById("toggle");
-
-function swapImage(){
-  if(toggle.checked == true){
-    audioFoto.src = "img/soundOff.png";
-    playSounds = false;
-  } else {
-    audioFoto.src = "img/soundOn.png";
-    playSounds = true;
-  }
-}
-
 
 // -----------Cookie Testing-----------
 
@@ -66,19 +52,35 @@ function getVerhaalCookie(cookiename){
   embed.setAttribute('src', '../sounds/backgroundMusic.mp3');
   document.getElementsByTagName('body')[0].appendChild(embed);
 
-window.addEventListener("DOMContentLoaded", event => {
+
   const audio = document.querySelector("audio");
   audio.volume = 0.2;
+
+window.addEventListener("DOMContentLoaded", event => {
+  // const audio = document.querySelector("audio");
   audio.play();
 });
 
 window.addEventListener("click", event => {
   console.log("click");
-  const audio = document.querySelector("audio");
-  audio.volume = 0.2;
+  // const audio = document.querySelector("audio");
   audio.play();
 });
 
+
+/*-----------------Audio Toggle------------------*/
+var audioFoto = document.getElementById("audioFoto");
+var toggle = document.getElementById("toggle");
+
+function swapImage(){
+  if(toggle.checked == true){
+    audioFoto.src = "img/soundOff.png";
+    document.querySelector("audio").volume = 0.0;
+  } else {
+    audioFoto.src = "img/soundOn.png";
+    audio.volume = 0.2;
+  }
+}
 
 
 console.log("Loaded main.js")
