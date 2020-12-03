@@ -1,7 +1,7 @@
 // -------Global Variables-------
 var playSounds = true;
 var cname = "verhaalnummer";
-var debug = false;
+var debug = true;
 
 
 // -----------Cookie Testing-----------
@@ -19,6 +19,15 @@ function setVerhaalCookie(cookiename, number, exdays) {
     console.log("cookie veranderd naar: " + number)
   }
 }
+
+function setCookie(cookiename, number, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cookiename + "=" + number +  ";" + expires + ";path=/";
+  console.log("cookie veranderd naar: " + number)
+}
+
 
 function resetVerhaalCookie() {{
   var d = new Date();
@@ -52,19 +61,24 @@ function getVerhaalCookie(cookiename){
   embed.setAttribute('src', '../sounds/backgroundMusic.mp3');
   document.getElementsByTagName('body')[0].appendChild(embed);
 
-
-  const audio = document.querySelector("audio");
-  audio.volume = 0.2;
+  var audio = document.querySelector("audio");
+  audio.volume = 0.1;
 
 window.addEventListener("DOMContentLoaded", event => {
   // const audio = document.querySelector("audio");
-  audio.play();
+  if (getVerhaalCookie("volume") != "0.0") {
+    console.log("volume");
+    audio.play();
+  }
 });
 
 window.addEventListener("click", event => {
   console.log("click");
   // const audio = document.querySelector("audio");
-  audio.play();
+  if (getVerhaalCookie("volume") != "0.0") {
+    console.log("volume");
+    audio.play();
+  }
 });
 
 
@@ -76,9 +90,11 @@ function swapImage(){
   if(toggle.checked == true){
     audioFoto.src = "img/soundOff.png";
     document.querySelector("audio").volume = 0.0;
+    setCookie("volume", "0.0", 1)
   } else {
     audioFoto.src = "img/soundOn.png";
-    audio.volume = 0.2;
+    audio.volume = 0.1;
+    setCookie("volume", "1.0", 1)
   }
 }
 
