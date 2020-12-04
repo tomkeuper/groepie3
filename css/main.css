@@ -101,6 +101,7 @@ a.btn{
     background-color: var(--background-color);
     position:relative;
     display:inline-block;
+    transition: 0.3s ease;
 }
 
 a.btn_continue{
@@ -113,6 +114,7 @@ a.btn_continue{
     background-color: var(--background-color);
     position:relative;
     display:inline-block;
+    transition: 0.3s ease;
 }
 a.btn:before{
     position:absolute;
@@ -123,6 +125,11 @@ a.btn:before{
     border-style: solid;
     border-width: 25px 25px 25px 0;
     border-color: transparent var(--main-color) transparent transparent;
+}
+
+a.btn:hover{
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 
 a.btn_continue:before{
@@ -308,7 +315,7 @@ a.btn:hover:before{
   grid-template-columns: auto;
   grid-template-rows: 3rem auto;
   /* margin: 1em; */
-  margin: 0px 1em;
+  margin: 0 1em;
   gap: 1em ;
   grid-template-areas:
     "creditsButton . "
@@ -338,7 +345,7 @@ a.btn:hover:before{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  gap: 15px 15px;
+  gap: 1em;
   grid-template-areas:
     "continue--arrow hub--icon"
     "generosity--video generosity--video"
@@ -359,7 +366,7 @@ a.btn:hover:before{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  gap: 15px 15px;
+  gap: 1em;
   grid-template-areas:
     "continue--arrow hub--icon"
     "obama--video obama--video"
@@ -375,9 +382,9 @@ a.btn:hover:before{
 }
 
 .hub--icon > img {
-  max-height: 170px;
-  margin: 5px;
-  max-width: 170px;
+  max-height: 15rem;
+  margin: 0.5em;
+  max-width: 15rem;
   width: 15vw;
   float: right;
 }
@@ -422,7 +429,7 @@ a.btn:hover:before{
   display: grid;
   grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
   grid-template-rows: 0.3fr 1fr 1fr 0.2fr;
-  gap: 0px 0px;
+  gap: 0;
   grid-template-areas:
     ". . . ."
     ". . book ."
@@ -432,9 +439,8 @@ a.btn:hover:before{
 
 .book {
   transform-style: preserve-3d;
-  /* position: relative; */
   height: 70vh;
-  max-height: 500px;
+  max-height: 20em;
   cursor: pointer;
   backface-visibility: visible;
   grid-area: book;
