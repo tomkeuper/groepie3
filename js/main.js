@@ -88,11 +88,11 @@ var toggle = document.getElementById("toggle");
 
 function swapImage(){
   if(toggle.checked == true){
-    audioFoto.src = "img/soundOff.png";
+    audioFoto.src = "../img/soundOff.png";
     document.querySelector("audio").volume = 0.0;
     setCookie("volume", "0.0", 1)
   } else {
-    audioFoto.src = "img/soundOn.png";
+    audioFoto.src = "../img/soundOn.png";
     audio.volume = 0.1;
     setCookie("volume", "1.0", 1)
   }
