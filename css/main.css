@@ -335,7 +335,7 @@ a.btn:hover:before{
 .video--grid--single {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto;
   gap: 15px 15px;
   grid-template-areas:
     "continue--arrow hub--icon"
@@ -350,12 +350,13 @@ a.btn:hover:before{
 .generosity--video--text {
   grid-area: tekst;
   text-align: center;
+  margin-bottom: 20px;
 }
 /*---------------Video grid (Double)--------*/
 .video--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr 0.5fr 1fr 0.5fr;
+  grid-template-rows: auto;
   gap: 15px 15px;
   grid-template-areas:
     "continue--arrow hub--icon"
@@ -393,6 +394,7 @@ a.btn:hover:before{
 .obama--video--text, .intro--video--text {
   grid-area: tekst1;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .ending--video, .apricot--video {
@@ -404,6 +406,7 @@ a.btn:hover:before{
 .ending--video--text, .apricot--video--text {
   grid-area: tekst2;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 

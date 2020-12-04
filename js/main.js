@@ -62,7 +62,7 @@ function getVerhaalCookie(cookiename){
   document.getElementsByTagName('body')[0].appendChild(embed);
 
   var audio = document.querySelector("audio");
-  audio.volume = 0.1;
+  audio.volume = 0.02;
 
 window.addEventListener("DOMContentLoaded", event => {
   // const audio = document.querySelector("audio");
@@ -93,7 +93,7 @@ function swapImage(){
     setCookie("volume", "0.0", 1)
   } else {
     audioFoto.src = "../img/soundOn.png";
-    audio.volume = 0.1;
+    audio.volume = 0.02;
     setCookie("volume", "1.0", 1)
   }
 }
