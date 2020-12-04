@@ -163,7 +163,7 @@ function changeSentence() {
             document.getElementById("js--sentence").innerText = "Maar toen trok Amerika zich terug.";
           break
         case "9":
-            document.getElementById("js--sentence").innerText = "";
+            document.getElementById("js--sentence").innerText = "U kunt nu elk verhaal terug kijken.";
             break
         default:
             console.log("cookie was not recognized")

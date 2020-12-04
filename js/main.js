@@ -1,7 +1,7 @@
 // -------Global Variables-------
 var playSounds = true;
 var cname = "verhaalnummer";
-var debug = true;
+var debug = false;
 
 
 // -----------Cookie Testing-----------

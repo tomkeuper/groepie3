@@ -305,14 +305,16 @@ a.btn:hover:before{
 /*----------------Credits gridpagina-------------*/
 .credits--grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  margin: 1em;
-  gap: 3em 3em;
+  grid-template-columns: auto;
+  grid-template-rows: 3rem auto;
+  /* margin: 1em; */
+  margin: 0px 1em;
+  gap: 1em ;
   grid-template-areas:
-    "creditsButton . ."
-    "creditsDevin creditsFeurat creditsHogeschool"
-    "creditsTom creditsIDFA creditsHogeschool"
+    "creditsButton . "
+    "creditsDevin creditsFeurat "
+    "creditsTom creditsIDFA"
+    "creditsHogeschool ."
 }
 
 .credits--button { grid-area: creditsButton}
@@ -327,8 +329,8 @@ a.btn:hover:before{
 
 .credits--hogeschool { grid-area: creditsHogeschool; }
 
-.credits--tekst > h2{
-
+.credits--tekst > p{
+  color: var(--text-color-white);
 }
 
 /*------------Video Grid (Single)------------*/
@@ -559,6 +561,12 @@ a.btn:hover:before{
 @media only screen and (min-width: 800px) {
 
 
+  .credits--grid {
+    grid-template-areas:
+      "creditsButton . ."
+      "creditsDevin creditsFeurat creditsHogeschool"
+      "creditsTom creditsIDFA creditsHogeschool"
+  }
 
   .title {
     font-size: 4rem;
