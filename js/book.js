@@ -13,7 +13,6 @@ var book_opened = false;
 
 typeText = (verhaal1) =>{
     if(verhaal1 != ""){
-      console.log(verhaal1[0]);
       setTimeout(() => {
         verhaaltekst1.innerHTML += verhaal1[0];
 
@@ -24,9 +23,6 @@ typeText = (verhaal1) =>{
       }, 10);
     }
 }
-console.log(verhaaltekst1.innerHTML);
-
-
 
 book.addEventListener("mouseenter", function( event ) {
   if (!book_opened) {
