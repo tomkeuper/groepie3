@@ -32,7 +32,7 @@ typeText2 = (verhaal1, verhaal2) =>{
         verhaal1.splice(0,1);
         setTimeout(() => {
             typeText2(verhaal1, verhaal2);
-        }, 10);
+        }, 2);
       }, 10);
     } else {
       if (verhaal2 != "") {
