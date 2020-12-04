@@ -504,7 +504,7 @@ footer{
 .book--grid {
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
-  grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.3fr;
   gap: 0px 0px;
   grid-template-areas:
     ". . . ."
@@ -518,7 +518,8 @@ footer{
 }
 
 .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
-  width: 30vw;
+  width: 40vw;
+  max-width: 450px;
   font-size: 3rem;
 }
 
