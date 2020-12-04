@@ -3,18 +3,39 @@ imported.src = '../js/main.js';
 document.head.appendChild(imported);
 
 
+var verhaaltekst2 = document.getElementById("js--verhaal1--text");
 var verhaaltekst1 = document.getElementById("js--verhaal1--text");
+
+var book = document.getElementById("js--book");
+
+var book_opened = false;
+
+
 typeText = (verhaal1) =>{
     if(verhaal1 != ""){
+      console.log(verhaal1[0]);
+      setTimeout(() => {
         verhaaltekst1.innerHTML += verhaal1[0];
+
         verhaal1.splice(0,1);
         setTimeout(() => {
             typeText(verhaal1);
-        }, 3000);
+        }, 10);
+      }, 10);
     }
 }
+console.log(verhaaltekst1.innerHTML);
 
-typeText(Array.from("Hello World"));
+
+
+book.addEventListener("mouseenter", function( event ) {
+  if (!book_opened) {
+    typeText(Array.from(verhaaltekst2.innerText));
+    verhaaltekst1.innerText = "";
+    book_opened = true;
+  }
+}, false);
+
 
 
 console.log("loaded book.js")
