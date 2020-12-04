@@ -12,7 +12,6 @@
     <title>Flavours of Iraq - Interactive Website</title>
   </head>
   <body>
-    <div class="startingOverlay">
       <main>
         <div class="home--grid">
           <section class="title">
@@ -20,9 +19,11 @@
           </section>
           <section class="uitleg">
             <p>Deze website is afgeleid van de documentaire: "Flavours of Iraq". Door verder te klikken op de website krijg je steeds meer te weten over het verhaal van Feurat Alani.</p>
+            <p>Op de volgende pagina krijg je een overzicht te zien van de verschillende beschikbare hoofdstukken, klik op het hoofdstuk waar je meer informatie over wilt zien. Aan het begin is er maar 1 verhaal beschikbaar, door de verhalen te lezen unlock je de andere verhalen. Je kunt altijd terug kijken naar een vorig hoofdstuk.</p>
+            <p>Als u op een hoofstuk geklikt heeft dan krijgt u een filmpje te zien of u kunt uit het journal van Feurat Alani lezen.</p>
           </section>
           <section class="arrow">
-            <a href="hub.html" class="btn">Continue</a>
+            <a href="hub.html" class="btn_continue">Continue</a>
           </section>
           <section class="audio--image">
             <figure><img id="audioFoto" src="img/soundOn.png" alt=""></figure>
@@ -31,6 +32,7 @@
             <input type="checkbox" id="toggle" class="checkbox" onclick="swapImage()">
             <label for="toggle" class="switch"></label>
           </section>
+        </div>
           <footer class="footer">
             <ul>
               <li><a href="credits.html">Credits</a></li>
@@ -38,7 +40,6 @@
               <li><a href="https://www.hsleiden.nl/">Hogeschool Leiden</a></li>
             </ul>
           </footer>
-        </div>
       </main>
     <script src="js/main.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -50,6 +51,5 @@
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
-  </div>
   </body>
 </html>
