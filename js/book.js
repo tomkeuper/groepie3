@@ -3,8 +3,8 @@ imported.src = '../js/main.js';
 document.head.appendChild(imported);
 
 
-var verhaaltekst2 = document.getElementById("js--verhaal1--text");
-var verhaaltekst1 = document.getElementById("js--verhaal1--text");
+var verhaaltekst2 = document.getElementById("js--verhaal--text");
+var verhaaltekst1 = document.getElementById("js--verhaal--text");
 
 var book = document.getElementById("js--book");
 
